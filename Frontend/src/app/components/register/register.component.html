@@ -1,0 +1,35 @@
+<div class="container mt-5">
+    <form action="" class="form-group" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+      <div>
+        <label>Name</label>
+        <input type="text" name="name" class="form-control" formControlName="name" [(ngModel)]="name">
+      </div>
+      <div class="er" *ngIf="myForm.get('name').invalid && (myForm.get('name').dirty || myForm.get('name').touched)">
+        Please provide a name.
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="email" name="email" class="form-control" formControlName="email" [(ngModel)]="email">
+      </div>
+      <div class="er" *ngIf="myForm.get('email').invalid && (myForm.get('email').dirty ||
+       myForm.get('email').touched)">
+        Please provide a valid email address.
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="password" name="password" class="form-control" formControlName="password" [(ngModel)]="password">
+      </div>
+      <div class="er" *ngIf="myForm.get('password').invalid && (myForm.get('password').dirty || myForm.get('password').touched)">
+        passwords must be at least 15 characters long.
+      </div>
+      <button class="btn btn-primary" (click)="register()" [disabled]="!myForm.valid" type="submit">SignUp</button>
+      <div>
+        <label class="lab mt-2">Already have an account ? <a routerLink="/signin">SignIn</a></label>
+      </div>
+    </form>
+  </div>
+
+  <div class="min">
+    <router-outlet></router-outlet>
+    
+  </div>

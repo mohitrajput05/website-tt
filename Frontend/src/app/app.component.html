@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+
+<body>
+    <!-- <div class="container"> -->
+        <!-- navbar -->
+        <div class="topnav" id="myTopnav">
+            <a href=""><img src="../assets/download-removebg-preview.png" alt=""></a>
+            <a href="#home" class="nv" routerLink="/">Home</a>
+            <a href="#news" class="nv" *ngIf="!isLoggedIn()">News</a>
+            <a href="#contact" class="nv" *ngIf="!isLoggedIn()">Contact</a>
+            <a href="#about" class="nv" *ngIf="!isLoggedIn()">About</a>
+            <a href="#signup" class="nv" *ngIf="!isLoggedIn()" routerLink="/signup">SignUp</a>
+            <a href="#addProduct" class="nv" *ngIf="isLoggedIn()" routerLink="/add-product">Add Product</a>
+            <a href="#viewProduct" class="nv" *ngIf="isLoggedIn()" routerLink="/view-product">View-product</a>
+            <a href="#signOut" class="nv" *ngIf="isLoggedIn()" routerLink="/signin" (click)="signOut()">Sign Out</a>
+        </div>
+
+        <div class="min">
+            <router-outlet></router-outlet>
+        </div>
+
+
+        <!-- footer section/ -->
+
+        <div class="footer">
+            <h3>@2022 Copyright | Throughout Technology</h3>
+        </div>
+
+
+    <!-- </div> -->
+    
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+.column{
+    width: 30.33%;
+    float: left;
+    height: 278px;
+    margin: 10px 10px;
+    border:3px solid black;
+    /* padding: 120px; */
+}
+
+img{
+    width: 72%;
+    margin:10px 43px;
+    height: auto;
+}
+
+.price{
+    margin-left: 20px;
+}
+.btn{
+    margin:10px 10px;
+}

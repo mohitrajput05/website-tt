@@ -1,0 +1,13 @@
+.container{
+    width: 60%;
+    height: 450px;
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.form-group{
+    margin-top: 20px;
+}
+.inp{
+    margin-top: 10px;
+}
